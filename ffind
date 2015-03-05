@@ -70,8 +70,8 @@ my $hidden_regex = qr/^\./;
 
 END { close STDOUT }
 if (-t STDOUT) {
-    my $pager = $ENV{PAGER} || "less";
-    open(STDOUT, "| $pager");
+    # my $pager = $ENV{PAGER} || "less";
+    # open(STDOUT, "| $pager");     # (jzc) I don't like a pager
     $color = 'always' if $color eq 'auto';
 }
 
